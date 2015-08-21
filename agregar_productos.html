@@ -2,20 +2,26 @@
 <html>
 <head>
 	<title>Agregar productos</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+
 </head>
 <body>
 <h1>Agregar un nuevo producto</h1>
-<form method="POST" name="flogin" id="flogin" action="ingresar.php">
+<form method="POST" name="agregar" id="agregar" action="agregar_producto.php">
 			<label>Id producto</label>
 			<input type="text" name="nuevo_id" id="nuevo_id" class="form-control"></br>
 			<label>Descripcion</label>
 			<input type="text" name="nuevo_produc" id="nuevo_produc" class="form-control"></br>
 
 			<label>Piezas</label>
-			<input type="text" name="nuevo_produc" id="nuevo_produc" class="form-control"></br>
+			<input type="text" name="cantidad" id="cantidad" class="form-control"></br>
 
-			<label>Precio</label>
-			<input type="text" name="nuevo_produc" id="nuevo_produc" class="form-control"></br>
+<label>Precio</label>			
+ 
+  <input type="text" name="precio" id="precio" class="form-control"></br>
+
+</div>
+
 
 			<input type="submit" class="btn btn-success" value="Enviar">
 		</form>
