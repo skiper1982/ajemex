@@ -53,7 +53,7 @@ CREATE TABLE `productos` (
   `Piezas` int(11) DEFAULT NULL,
   `Precio` float(4,2) unsigned DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -62,6 +62,7 @@ CREATE TABLE `productos` (
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
+INSERT INTO `productos` VALUES (1,'Big Cola 3 Lt.',6,99.99),(2,'Big Cola 1 Lt.',12,86.00),(3,'Big Manzana 3 Lt.',6,80.00),(4,'Big Naranja 3 Lt.',6,80.00),(5,'Big Toronja 3 Lt.',6,80.00);
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -99,4 +100,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-08-21 12:28:42
+-- Dump completed on 2015-08-21 12:43:22
