@@ -2,15 +2,15 @@
  
 $server = "localhost";
 $user = "root";
-$pass = "";
-$bd = "ejercicio";
+$pass = "1111";
+$bd = "ajemex";
  
 //Creamos la conexión
 $conexion = mysqli_connect($server, $user, $pass,$bd) 
 or die("Ha sucedido un error inexperado en la conexion de la base de datos");
  
 //generamos la consulta
-$sql = "SELECT * FROM trabajadores";
+$sql = "SELECT * FROM productos";
 mysqli_set_charset($conexion, "utf8"); //formato de datos utf8
  
 if(!$result = mysqli_query($conexion, $sql)) die();
@@ -19,18 +19,14 @@ $trabajadores = array(); //creamos un array
  
 while($row = mysqli_fetch_array($result)) 
 { 
-    $id=$row['id'];
-    $nombre=$row['nombre'];
-    $edad=$row['edad'];
-    $genero=$row['genero'];
-    $email=$row['email'];
-    $localidad=$row['localidad'];
-    $telefono=$row['telefono'];
+    $id=$row['ID'];
+    $descripcion=$row['Descripcion'];
+    $piezas=$row['Piezas'];
+    $precio=$row['Precio'];
+   
+    $productos[] = array('ID'=>$id, 'Descripcion' => $descripcion, 'Piezas'=>$piezas, 'Precio'=>$precio);
+ 
     
- 
-    $trabajadores[] = array('id'=> $id, 'nombre'=> $nombre, 'edad'=> $edad, 'genero'=> $genero,
-                        'email'=> $email, 'localidad'=> $localidad, 'telefono'=> $telefono);
- 
 }
     
 //desconectamos la base de datos
@@ -39,7 +35,7 @@ or die("Ha sucedido un error inexperado en la desconexion de la base de datos");
   
  
 //Creamos el JSON
-$json_string = json_encode($trabajadores);
+$json_string = json_encode($productos);
 echo $json_string;
  
 //Si queremos crear un archivo json, sería de esta forma:
