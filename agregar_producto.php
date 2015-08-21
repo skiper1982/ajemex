@@ -24,7 +24,7 @@ echo "No se logro conectar";
 
 } else {
 	
-	$insert_value = 'INSERT INTO `' . $db_name . '`.`'.$db_table_name.'` (`ID` , `Descripcion` , `Piezas`,`Precio`) VALUES ("' . $subs_id . '", "' . $subs_descripcion . '", "' . $subs_piezas . '","' . $subs_precio . '")';/* Consulta para agregar datos */
+	$insert_value = 'INSERT INTO `' . $db_name . '`.`'.$db_table_name.'` ( `Descripcion` , `Piezas`,`Precio`) VALUES ("' . $subs_descripcion . '", "' . $subs_piezas . '","' . $subs_precio . '")';/* Consulta para agregar datos */
 
 mysql_select_db($db_name, $db_connection);
 $retry_value = mysql_query($insert_value, $db_connection);
