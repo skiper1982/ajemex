@@ -12,7 +12,7 @@
 <body>
 	<div class="jumbotron boxlogin">
 		<form method="POST" name="flogin" id="flogin" action="ingresar.php">
-			<center><h2>Inicie secion</h2></center>
+			<center><h2>Inicie sesion</h2></center>
 			<label>Nombre de usuario</label>
 			<input type="text" name="usermane" id="username" class="form-control">
 			<label>Contraseña</label>
