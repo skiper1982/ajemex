@@ -1,0 +1,27 @@
+html{
+	margin: 0px;
+	padding: 0px;
+
+
+}
+body{
+	background-image: url("background.jpg");
+}
+form{
+	margin: 10px;
+	padding: 10px;
+}
+.boxlogin{
+	border-radius:4px;
+	box-shadow: 0px 2px 10px #bdbdbd; 
+	margin: 100px auto;
+	width: 320px;
+	-webki-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+input[type="submit"]{
+	margin-top: 15px;
+}
+h2{
+	margin: 5px;
+}
