@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="cssestilo.css">
 <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" ></script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <link rel="stylesheet" href="estilo.css">
 
 </head>
@@ -21,30 +21,34 @@
 <center>
 <h1>Agregue un pedido</h1>
 
-<form class="form-horizontal">
+<form action="pedidos.php" class="form-horizontal">
   <div class="form-group">
     <label class="col-sm-2 control-label">Trabajador:</label>
     <div class="col-sm-2">
-      <p class="form-control-static">Jorge  Chel</p><!--Aqui la variable de usuario -->
+      <select name="mascota">
+    <option selected>--- Seleccione al repartidor ---</option>
+    <option>Jorge Chel</option>
+    <option>Pedro </option>
+  </select>
     </div>
   </div>
   <div class="form-group">
     <label class="col-sm-2 control-label">Codigo de venta</label>
     <div class="col-sm-2">
-      <input type="number" min= "0" class="form-control" id="num_cliente" placeholder="Codigo de venta">
+      <input type="number" min= "1" class="form-control" id="num_cliente" placeholder="Codigo de venta">
     </div>
   </div>
   <div class="form-group">
     <label class="col-sm-2 control-label">Numero de cliente</label>
     <div class="col-sm-2">
-      <input type="number" class="form-control" id="num_cliente" placeholder="Numero cliente">
+      <input type="number"  min= "1" class="form-control" id="num_cliente" placeholder="Numero cliente">
     </div>
   </div>
   <h3>Ponga la cantidad de producto solicitada por el cliente</h3>
   <div class="form-group">
     <label class="col-sm-2 control-label">Big Cola 3 Lt.</label>
     <div class="col-sm-2">
-      <input type="number" class="form-control" id="num_cliente" placeholder="Big Cola 3 Lt">
+      <input type="number" min= "0" class="form-control" id="num_cliente" placeholder="Big Cola 3 Lt">
       <div class="input-group-addon">$ 105.00</div>
       <p class="bg-primary">6 Piezas</p>
     </div>
@@ -53,7 +57,7 @@
     <div class="form-group">
       <label class="col-sm-2 control-label">Big Cola 1 Lt.</label>
       <div class="col-sm-2">
-        <input type="number" class="form-control" id="num_cliente" placeholder="Big Cola 1 Lt">
+        <input type="number" min= "0" class="form-control" id="num_cliente" placeholder="Big Cola 1 Lt">
         <div class="input-group-addon">$ 85.00</div>
 
         <p class="bg-primary">12 Piezas</p>
@@ -65,7 +69,7 @@
         <label class="col-sm-2 control-label">Big Manzana 3 Lt.</label>
 
         <div class="col-sm-2">
-          <input type="number" class="form-control" id="num_cliente" placeholder="Big Manzana 3 Lt">
+          <input type="number" min= "0" class="form-control" id="num_cliente" placeholder="Big Manzana 3 Lt">
           <div class="input-group-addon">$ 80.00</div>
           <p class="bg-primary">6 Piezas</p>
 
@@ -75,7 +79,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label">Big Naranja 3 Lt.</label>
           <div class="col-sm-2">
-            <input type="number" class="form-control" id="num_cliente" placeholder="Big Naranja 3 Lt">
+            <input type="number" min= "0" class="form-control" id="num_cliente" placeholder="Big Naranja 3 Lt">
             <div class="input-group-addon">$ 80.00</div>
             <p class="bg-primary">6 Piezas</p>
 
@@ -84,7 +88,7 @@
           <div class="form-group">
             <label class="col-sm-2 control-label">Big Toronja 3 Lt.</label>
             <div class="col-sm-2">
-              <input type="number" class="form-control" id="num_cliente" placeholder="Big Toronja 3 Lt">
+              <input type="number" min= "0" class="form-control" id="num_cliente" placeholder="Big Toronja 3 Lt">
               <div class="input-group-addon">$ 80.00</div>
               <p class="bg-primary">6 Piezas</p>
 
@@ -93,7 +97,7 @@
             <div class="form-group">
               <label class="col-sm-2 control-label">Big AQUA 1.5 Lts.</label>
               <div class="col-sm-2">
-                <input type="number" class="form-control" id="num_cliente" placeholder="Big AQUA 1.5 Lts">
+                <input type="number" min= "0" class="form-control" id="num_cliente" placeholder="Big AQUA 1.5 Lts">
                 <p class="bg-primary">6 Piezas</p>
               </div>
             </div>
@@ -104,7 +108,7 @@
     <div class="form-group">
       <label class="col-sm-2 control-label">Big AQUA 1.5 Lt.</label>
       <div class="col-sm-2">
-        <input type="number" class="form-control" id="num_cliente" placeholder="Big AQUA 1.5 Lt">
+        <input type="number" min= "0" class="form-control" id="num_cliente" placeholder="Big AQUA 1.5 Lt">
         <div class="input-group-addon">$ 70.00</div>
         <p class="bg-primary">12 Piezas</p>
 
@@ -116,7 +120,7 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">Big AQUA 1 Lt.</label>
                 <div class="col-sm-2">
-                  <input type="number" class="form-control" id="num_cliente" placeholder="Big AQUA 1 Lt">
+                  <input type="number" min= "0" class="form-control" id="num_cliente" placeholder="Big AQUA 1 Lt">
                   <div class="input-group-addon">$ 55.00</div>
                 <p class="bg-primary">12 Piezas</p>
                 </div>
@@ -125,7 +129,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Big AQUA 620 ML.</label>
                   <div class="col-sm-2">
-                    <input type="number" class="form-control" id="num_cliente" placeholder="Big AQUA 620 ML.">
+                    <input type="number"min= "0" class="form-control" id="num_cliente" placeholder="Big AQUA 620 ML.">
                     <div class="input-group-addon">$ 70.00</div>
                     <p class="bg-primary">24 Piezas</p>
                   </div>
@@ -135,7 +139,7 @@
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Big CITRUS 3 Lts.</label>
                     <div class="col-sm-2">
-                      <input type="number" class="form-control" id="num_cliente" placeholder="Big CITRUS 3 Lts">
+                      <input type="number"min= "0"class="form-control" id="num_cliente" placeholder="Big CITRUS 3 Lts">
                       <div class="input-group-addon">$ 105.00</div>
                       <p class="bg-primary">6 Piezas</p>
                     </div>
@@ -144,7 +148,7 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Big CITRUS 500 ML.</label>
                     <div class="col-sm-2">
-                      <input type="number" class="form-control" id="num_cliente" placeholder="Big CITRUS 500 ML">
+                      <input type="number" min= "0"class="form-control" id="num_cliente" placeholder="Big CITRUS 500 ML">
                       <div class="input-group-addon">$ 105.00</div>
                       <p class="bg-primary">24 Piezas</p>
                     </div>
@@ -153,7 +157,7 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Big CITRUS GASIFICADA 2.5 Lts.</label>
                     <div class="col-sm-2">
-                      <input type="number" class="form-control" id="num_cliente" placeholder="Big CITRUS GASIFICADA 2.5  Lts.">
+                      <input type="number" min= "0" class="form-control" id="num_cliente" placeholder="Big CITRUS GASIFICADA 2.5  Lts.">
                       <div class="input-group-addon">$ 105.00</div>
                       <p class="bg-primary">6 Piezas</p>
                     </div>
@@ -162,7 +166,7 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Big CITRUS 500 ML.</label>
                     <div class="col-sm-2">
-                      <input type="number" class="form-control" id="num_cliente" placeholder="Big CITRUS 500 ML">
+                      <input type="number" min= "0"class="form-control" id="num_cliente" placeholder="Big CITRUS 500 ML">
                       <div class="input-group-addon">$ 70.00</div>
                       <p class="bg-primary">12 Piezas</p>
                     </div>
@@ -170,7 +174,7 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label">VOLT LATA 473 ML</label>
                     <div class="col-sm-2">
-                      <input type="number" class="form-control" id="num_cliente" placeholder="VOLT LATA 473 ML">
+                      <input type="number" min= "0" class="form-control" id="num_cliente" placeholder="VOLT LATA 473 ML">
                       <div class="input-group-addon">$ 120.00</div>
                       <p class="bg-primary">12 Piezas</p>
                     </div>
@@ -178,7 +182,7 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label">VOLT 300 ML</label>
                     <div class="col-sm-2">
-                      <input type="number" class="form-control" id="num_cliente" placeholder="VOLT 300 ML">
+                      <input type="number" min= "0" class="form-control" id="num_cliente" placeholder="VOLT 300 ML">
                       <div class="input-group-addon">$ 90.00</div>
                       <p class="bg-primary">12 Piezas</p>
                     </div>
@@ -186,7 +190,7 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label">COOL TEA LIMON 400 ML</label>
                     <div class="col-sm-2">
-                      <input type="number" class="form-control" id="num_cliente" placeholder="COOL TEA LIMON 400 ML">
+                      <input type="number" min= "0" class="form-control" id="num_cliente" placeholder="COOL TEA LIMON 400 ML">
                       <div class="input-group-addon">$ 55.00</div>
                       <p class="bg-primary">12 Piezas</p>
                     </div>
@@ -201,9 +205,10 @@
  </div>
                     </div>
                 </div>
-                	<input type="submit" class="btn btn-primary btn-lg btn-block" value="Enviar">
-<button type="button" class="btn btn-default btn-lg btn-block">Cancelar pedido</button>
+                	<input type="submit" class="btn btn-primary btn-lg btn-block " value="Enviar" >
+
 </form>
+<form method="get" action="index.php"><button type="submit" class="btn  btn-danger btn-lg btn-block">Cancelar pedido<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button></form>
 </center>
 
         <!-- Pie de pagina -->

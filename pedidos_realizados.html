@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Productos de AJEMEX</title>
+<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap-theme.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap-theme.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/nps.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="cssestilo.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" ></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="estilo.css">
+<script type="text/javascript" src="bootstrap/js/bootstrap-typeahead.js"></script>
+</head>
+<body>
+
+
+  <div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading"><h1>Pedidos realizados</h1></div>
+  <div class="panel-body">
+    <p>Los pedidos realizados que no se han repartido son los siguientes</p>
+  
+  </div>
+
+  <!-- Table -->
+  <div class="table-responsive">
+  <table class="table">
+    <thead>
+    <th>Vendedor</th>
+    <th>Num. venta</th>
+    <th>Cliente</th>
+    <th>Nombre</th>
+    <th>Direccion</th>
+    <th>Pedido</th>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+<script type="text/javascript">
+
+$(document).ready(function(){
+var url="mostrar_pedidos.php";
+$("#tablausuarios tbody").html("");
+$.getJSON(url,function(clientes){
+$.each(clientes, function(i,cliente){
+var newRow =
+"<tr>"
++"<td>"+cliente.ID+"</td>"
++"<td>"+cliente.Nombre+"</td>"
++"<td>"+cliente.Direccion+"</td>"
++"<td>"+cliente.Telefono+"</td>";
+$(newRow).appendTo("#tablausuarios tbody");
+});
+});
+});
+
+</script>
+</body>
+</html>
