@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Pedidos de AJEMEX</title>
+<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap-theme.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap-theme.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/nps.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="cssestilo.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" ></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+
+
+<body>
+
+
+
+        <!-- Cabecera -->
+        <header>
+            <h1>Pedidos realizados</h1>
+        </header>
+<div class="table-responsive">
+        <!-- Contenido -->
+        <section>
+
+
+			<table class="grilla, table" id="tablajson">
+			<thead>
+			<th>Codigo de Venta</th>
+			<th>Numero de cliente</th>
+			<th>Big Cola 3 Litros</th>
+			<th>Big Cola 1 Litro</th>
+			<th>Big Manzana 3 Litros</th>
+			<th>Big Naranja 3 Litros</th>
+			<th>Big Toronja 3 Litros</th>
+			<th>Big AQUA 1.5 Litros 6 Piezas</th>
+			<th>Big AQUA 1.5 Litros 12 Piezas</th>
+			<th>Big AQUA 1 Litro</th>
+			<th>Big AQUA 620 Mililitros</th>
+			<th>Big CITRUS 3 Litros</th>
+			<th>Big CITRUS 500 Mililitros 24 Piezas</th>
+			<th>Big CITRUS GASIFICADA</th>
+			<th>Big CITRUS 500 Mililitros 12 Piezas</th>
+			<th>VOLT LATA 473 Mililitros</th>
+			<th>VOLT 300 Mililitros</th>
+			<th>COOL TEA LIMON 400 Mililitros</th>
+			<th>COOL TEA DURAZNO 400 Mililitros</th>
+			</thead>
+			<tbody></tbody>
+			</table>
+
+			<script type="text/javascript">
+
+			$(document).ready(function(){
+			var url="pedidos_hechos.php";
+			$("#tablajson tbody").html("");
+			$.getJSON(url,function(agregar_productos){
+			$.each(agregar_productos, function(i,agregar_productos){
+			var newRow =
+			"<tr>"
+			+"<td>"+agregar_productos.ID+"</td>"
+			+"<td>"+agregar_productos.Descripcion+"</td>"
+			+"<td>"+agregar_productos.Piezas+"</td>"
+			+"<td>"+agregar_productos.Precio+"</td>";
+			$(newRow).appendTo("#tablajson tbody");
+			});
+			});
+			});
+
+			</script>
+
+
+        </section>
+</div>
+<a href="agregar_pedido.html">Agregar Pedido</a>
+
+        <!-- Pie de pagina -->
+        <footer>
+
+        </footer>
+
+
+</body>
+</html>

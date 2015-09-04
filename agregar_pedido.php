@@ -51,7 +51,7 @@ if (!$retry_value) {
    die('Error: ' . mysql_error());
 }
 
-header('Location: productos.html');
+header('Location: mostrar_pedidos_realizados.html');
 }
 
 mysql_close($db_connection);
