@@ -33,6 +33,7 @@
 			<table class="grilla, table" id="tablajson">
 			<thead>
 			<th>Codigo de Venta</th>
+			<th>Vendedor</th>
 			<th>Numero de cliente</th>
 			<th>Big Cola 3 Litros</th>
 			<th>Big Cola 1 Litro</th>
@@ -64,11 +65,20 @@
 			$.each(agregar_productos, function(i,agregar_productos){
 			var newRow =
 			"<tr>"
-			+"<td>"+agregar_productos.ID+"</td>"
-			+"<td>"+agregar_productos.Descripcion+"</td>"
-			+"<td>"+agregar_productos.Piezas+"</td>"
-			+"<td>"+agregar_productos.Precio+"</td>";
-			$(newRow).appendTo("#tablajson tbody");
+			+"<td>"+agregar_productos.ID_Pedido+"</td>"
+			+"<td>"+agregar_productos.Vendedor+"</td>"
+			+"<td>"+agregar_productos.Fecha+"</td>"
+			+"<td>"+agregar_productos.Cliente+"</td>"
+			+"<td>"+agregar_productos.CajasBig_Cola_3_L+"</td>"
+			+"<td>"+agregar_productos.CajasBig_Cola_1_L+"</td>"
+			+"<td>"+agregar_productos.CajasBig_Manzana_3_L+"</td>"
+			+"<td>"+agregar_productos.CajasBig_Naranja_3_L+"</td>"
+			+"<td>"+agregar_productos.CajasBig_Toronja_3_L+"</td>"
+			+"<td>"+agregar_productos.CajasBig_AQUA_1_5_L+"</td>"
+			+"<td>"+agregar_productos.CajasBig_AQUA_1_5_L_12_piezas+"</td>"
+			+"<td>"+agregar_productos.CajasBig_AQUA_1_L+"</td>"
+			+"<td>"+agregar_productos.CajasBig_AQUA_620_ML+"</td>"
+			$(newRow).appendTo("#tablajson tbody")
 			});
 			});
 			});
